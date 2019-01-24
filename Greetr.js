@@ -61,7 +61,7 @@
             }
 
             //THIS return the OBJ and makes method chainnable greet().greet()
-        return this;
+            return this;
         },
 
         log: function(){
@@ -74,8 +74,16 @@
             this.lang = lang;
 
             this.validate();
-            
+
             return this;
+        },
+
+        setOnHtml: function(element){
+            console.log("enter")
+            var el = document.querySelector(element);
+            console.log(el)
+            el.innerHTML  = this.formalGreeting();
+
         }
     }
 

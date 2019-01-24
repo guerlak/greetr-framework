@@ -6,7 +6,6 @@ function login(){
    var g = G$(firstname, lastname)
 
    g.greet(true);
-
-   document.getElementById("greet").textContent = g.greet(true);
+   g.setOnHtml("#greet");
 
 }
