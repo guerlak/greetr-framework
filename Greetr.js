@@ -52,6 +52,7 @@
             if(formal){
                 msg = this.formalGreeting();
             }else{
+                console.log("passou")
                 msg = this.sayHelloLang();
             }
 
@@ -78,12 +79,17 @@
             return this;
         },
 
-        setOnHtml: function(element){
+        setOnHtml: function(element, formal){
             console.log("enter")
             var el = document.querySelector(element);
             console.log(el)
-            el.innerHTML  = this.formalGreeting();
 
+            if(formal){
+                el.innerHTML  = this.formalGreeting();
+            }else{
+                console.log("passou")
+                el.innerHTML  = this.sayHelloLang();
+            }
         }
     }
 
