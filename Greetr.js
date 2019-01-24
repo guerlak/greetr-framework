@@ -9,8 +9,8 @@
     var supportedLangs = ["en", "pt"]
 
     var greetings = {
-        en: "Hello There,",
-        pt: "Olá,"
+        en: "Hi,",
+        pt: "O pá,"
     }
 
     var formalGreetings = {
@@ -19,6 +19,7 @@
     }
 
     Greetr.prototype = {
+
         getFullname: function(){
             return this.firstname + " " + this.lastname;
         },
@@ -29,7 +30,6 @@
             }else{
                 return greetings['pt'] + " " + this.firstname;
             }
-    
         },
 
         formalGreeting(){
@@ -61,7 +61,7 @@
             }
 
             //THIS return the OBJ and makes method chainnable greet().greet()
-            return this;
+        return this;
         },
 
         log: function(){
@@ -74,7 +74,7 @@
             this.lang = lang;
 
             this.validate();
-
+            
             return this;
         }
     }

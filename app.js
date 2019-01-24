@@ -1,3 +1,12 @@
-var g = G$("Rafael", "Leite");
 
-g.greet().greet(true);
+function login(){
+   let firstname = document.getElementById('firstname').value;
+   let lastname = document.getElementById('lastname').value
+
+   var g = G$(firstname, lastname)
+
+   g.greet(true);
+
+   document.getElementById("greet").textContent = g.greet(true);
+
+}
